@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eqr-3s-QGm">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed Controller-->
+        <scene sceneID="98d-dZ-NNV">
+            <objects>
+                <viewController storyboardIdentifier="FeedController" id="Eqr-3s-QGm" customClass="FeedController" customModule="Otus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EdX-3a-g27">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DKb-xY-goz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Eqr-3s-QGm" id="oy8-x6-pzj"/>
+                                    <outlet property="delegate" destination="Eqr-3s-QGm" id="Y6F-Sn-5xk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DKb-xY-goz" firstAttribute="leading" secondItem="UmV-wk-9xv" secondAttribute="leading" id="OIt-hO-2cg"/>
+                            <constraint firstItem="UmV-wk-9xv" firstAttribute="bottom" secondItem="DKb-xY-goz" secondAttribute="bottom" id="gj2-kw-M36"/>
+                            <constraint firstItem="DKb-xY-goz" firstAttribute="top" secondItem="UmV-wk-9xv" secondAttribute="top" id="rN2-FM-Nbt"/>
+                            <constraint firstItem="UmV-wk-9xv" firstAttribute="trailing" secondItem="DKb-xY-goz" secondAttribute="trailing" id="xsB-IT-PmG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UmV-wk-9xv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oES-86-fSD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mh-0M-tga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="-924"/>
+        </scene>
+        <!--Session Summary Controller-->
+        <scene sceneID="aaw-ay-cjZ">
+            <objects>
+                <viewController storyboardIdentifier="SessionSummaryController" id="KQ4-36-vkc" customClass="SessionSummaryController" customModule="Otus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aL6-GH-ydT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контроллер 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmO-of-005">
+                                <rect key="frame" x="142" y="104" width="130" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5e-nI-wp0">
+                                <rect key="frame" x="115" y="188" width="184" height="30"/>
+                                <state key="normal" title="Перейти к контроллеру 3"/>
+                                <connections>
+                                    <segue destination="kSw-xL-z7B" kind="show" id="LIu-kY-gfZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v5e-nI-wp0" firstAttribute="top" secondItem="NmO-of-005" secondAttribute="bottom" constant="60" id="5El-zp-0bz"/>
+                            <constraint firstItem="NmO-of-005" firstAttribute="top" secondItem="hLE-AH-1Yz" secondAttribute="top" constant="60" id="aOH-mY-wfJ"/>
+                            <constraint firstItem="v5e-nI-wp0" firstAttribute="centerX" secondItem="aL6-GH-ydT" secondAttribute="centerX" id="don-JT-hyT"/>
+                            <constraint firstItem="NmO-of-005" firstAttribute="centerX" secondItem="aL6-GH-ydT" secondAttribute="centerX" id="dvf-hR-8AV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hLE-AH-1Yz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxk-b3-y1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2693" y="-924"/>
+        </scene>
+        <!--Feed3 Controller-->
+        <scene sceneID="TCE-DI-Des">
+            <objects>
+                <viewController id="kSw-xL-z7B" customClass="Feed3Controller" customModule="Otus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8z-9B-T3V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контроллер 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pup-ua-MH3">
+                                <rect key="frame" x="141.5" y="104" width="131" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-vu-RPP">
+                                <rect key="frame" x="116.5" y="188" width="181" height="30"/>
+                                <state key="normal" title="Перейти к контроллеру 1"/>
+                                <connections>
+                                    <action selector="gotoFirstController" destination="kSw-xL-z7B" eventType="touchUpInside" id="oNc-wH-Kai"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZSH-vu-RPP" firstAttribute="top" secondItem="Pup-ua-MH3" secondAttribute="bottom" constant="60" id="4Uu-Il-IMZ"/>
+                            <constraint firstItem="Pup-ua-MH3" firstAttribute="top" secondItem="AqW-Oy-Tuq" secondAttribute="top" constant="60" id="CgU-RR-SIk"/>
+                            <constraint firstItem="ZSH-vu-RPP" firstAttribute="centerX" secondItem="W8z-9B-T3V" secondAttribute="centerX" id="FmA-MZ-lBG"/>
+                            <constraint firstItem="Pup-ua-MH3" firstAttribute="centerX" secondItem="W8z-9B-T3V" secondAttribute="centerX" id="dhk-6h-vvV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AqW-Oy-Tuq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCu-q6-nGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3493" y="-925"/>
+        </scene>
+    </scenes>
+</document>
